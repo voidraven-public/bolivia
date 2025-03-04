@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolivia Discovery: Educational Adventure</title>
+    <link rel="stylesheet" href="game-styles.css">
+    <script src="game-script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Component -->
+    <nav id="main-navigation">
+        <div class="logo">
+            <img src="/images/bolivia-game-logo.png" alt="Bolivia Discovery Game Logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#landing" class="nav-link">Home</a></li>
+            <li><a href="#profile" class="nav-link">Profile</a></li>
+            <li><a href="#map" class="nav-link">Regions</a></li>
+            <li><a href="#dashboard" class="nav-link">Progress</a></li>
+        </ul>
+        <div class="user-status">
+            <span id="username-display">Explorer</span>
+            <span id="points-display">0 Knowledge Points</span>
+        </div>
+    </nav>
+
+    <!-- Landing Page -->
+    <section id="landing" class="page active">
+        <div class="landing-content">
+            <h1>Bolivia Discovery Game</h1>
+            <p>Embark on an educational journey through Bolivia's rich history and diverse cultures!</p>
+            
+            <div class="intro-video-container">
+                <video id="intro-video" controls>
+                    <source src="/videos/bolivia-intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="start-options">
+                <button id="new-game-btn" class="btn primary-btn">Start New Adventure</button>
+                <button id="continue-game-btn" class="btn secondary-btn">Continue Saved Game</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Creation Page -->
+    <section id="profile" class="page">
+        <div class="profile-container">
+            <h2>Create Your Explorer Profile</h2>
+            
+            <form id="profile-creation-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Enter your explorer name" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Choose Your Cultural Avatar</label>
+                    <div class="avatar-selection">
+                        <div class="avatar-option">
+                            <input type="radio" id="quechua-avatar" name="avatar" value="quechua">
+                            <label for="quechua-avatar">
+                                <img src="/images/quechua-avatar.png" alt="Quechua Avatar">
+                                <span>Quechua Explorer</span>
+                            </label>
+                        </div>
+                        <div class="avatar-option">
+                            <input type="radio" id="aymara-avatar" name="avatar" value="aymara">
+                            <label for="aymara-avatar">
+                                <img src="/images/aymara-avatar.png" alt="Aymara Avatar">
+                                <span>Aymara Explorer</span>
+                            </label>
+                        </div>
+                        <div class="avatar-option">
+                            <input type="radio" id="mixed-avatar" name="avatar" value="mixed">
+                            <label for="mixed-avatar">
+                                <img src="/images/mixed-avatar.png" alt="Mixed Heritage Avatar">
+                                <span>Mixed Heritage Explorer</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="difficulty">Select Difficulty</label>
+                    <select id="difficulty" name="difficulty">
+                        <option value="junior">Junior Explorer (Ages 12-13)</option>
+                        <option value="advanced">Advanced Explorer (Ages 14-15)</option>
+                        <option value="master">Master Explorer (Ages 16+)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn primary-btn">Create Profile</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bolivia Map Page -->
+    <section id="map" class="page">
+        <div class="map-container">
+            <h2>Explore Bolivia's Regions</h2>
+            
+            <div id="bolivia-interactive-map">
+                <!-- SVG Map of Bolivia with Clickable Regions -->
+                <svg viewBox="0 0 500 400">
+                    <!-- Region paths would be defined here -->
+                    <path id="la-paz-region" data-region="la-paz" class="region"></path>
+                    <path id="santa-cruz-region" data-region="santa-cruz" class="region"></path>
+                    <!-- More regions... -->
+                </svg>
+            </div>
+
+            <div id="region-details">
+                <h3 id="selected-region-name">Select a Region</h3>
+                <div id="region-description"></div>
+                <div id="region-challenges">
+                    <h4>Available Challenges</h4>
+                    <ul id="challenge-list"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Page -->
+    <section id="challenge" class="page">
+        <div class="challenge-header">
+            <h2 id="challenge-title">Regional Challenge</h2>
+            <div class="challenge-info">
+                <span id="time-remaining">Time: 10:00</span>
+                <span id="current-score">Score: 0</span>
+            </div>
+        </div>
+
+        <div id="challenge-content">
+            <div id="question-container">
+                <p id="question-text"></p>
+                <div id="answer-options">
+                    <!-- Radio buttons or multiple choice options -->
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-controls">
+            <button id="submit-answer-btn" class="btn primary-btn">Submit Answer</button>
+            <button id="next-question-btn" class="btn secondary-btn" disabled>Next Question</button>
+        </div>
+    </section>
+
+    <!-- Progress Dashboard -->
+    <section id="dashboard" class="page">
+        <h2>Your Bolivia Discovery Progress</h2>
+        
+        <div class="dashboard-grid">
+            <div class="badge-collection">
+                <h3>Earned Badges</h3>
+                <div id="badge-container"></div>
+            </div>
+
+            <div class="knowledge-stats">
+                <h3>Learning Statistics</h3>
+                <div id="stats-chart-container">
+                    <!-- Chart showing progress across regions -->
+                </div>
+                <ul id="region-progress-list"></ul>
+            </div>
+
+            <div class="achievements">
+                <h3>Achievements</h3>
+                <div id="achievement-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Bolivia Discovery Game - An Educational Journey</p>
+            <div class="footer-links">
+                <a href="#" id="credits-link">Credits</a>
+                <a href="#" id="privacy-policy">Privacy Policy</a>
+                <a href="#" id="contact-support">Support</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

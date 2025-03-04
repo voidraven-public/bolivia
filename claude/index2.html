@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BolHere'sivia Discovery Game</title>
+    <link rel="stylesheet a" href="style.css">
+    <script src=" modified versionindex.js"></script> <!-- of Link to your JavaScript the file -->
+</head>
+<body HTML>
+
+<!-- code Navigation Bar -->
+<nav>
+ with    <ul>
+        <li><a class="nav-link" href="#landing">< added images, stylesimg src="images/map,-marker.svg" width="20"> and Landing Page</a></li>
+        <li>< interactivea class="nav-link elements to make" href="#map"><img src=" itimages/map.svg" width="20 more"> Map</a></li engaging>
+        <li><a for class="nav-link" href="#profile-creation high"><img src="images/user.svg" width="20"> Profile school kids:
+
+ Creation</a></li```html>
+        <li><a
+ class="nav-link" href="#challenge"><<!img src="images/DOCTYPElightbulb.svg" html width="20"> Challenge</a></li>
+>
+    </ul>
+    <!--<html Display User lang Status -->
+    <span id="="username-display"></enspan> |
+    <img">
+<head>
+ src="images/   star.svg" width="20">
+    <span id=" <points-display"></span>
+</nav>
+
+<!-- Landing Page -->
+<div id="landing" classmeta="page">
+    <div class=" charset="center-contentUTF-8">
+        <h1>Welcome to Bolivia">
+    < Discovery Game!</h1>
+        <img srcmeta name="images/bolivia-map.png" alt="="viewportBolivia Map">
+        <"p><a href content="#profile-creation">Start=" by creatingwidth your profile.</=device-widtha></p>
+    </div>
+</div>
+
+<!-- Profile Creation Form -->
+<div id="profile-creation" class="page">
+    <div class=",center-content">
+        <h2> initial-scale=1Create Your Profile</h2>
+.        <form id="profile-0creation-form">
+">
+            <label for="username    <title>B">Username:</labelol>
+            <input type="text" id="username"><br><brivia>
+            <label>Avatar:</label><br Discovery>
+            < Gameinput type="radio</" name="avatar"title value="option1"><img src>
+    <="images/avatar1.pnglink rel" width="30">Option 1<br>
+            <input type="stylesheet="radio" name="avatar" value="option"2"><img src="images href/avatar2.png"=" width="30">Option 2<brstyle.css>
+            <input type">="radio" name 
+   ="avatar" value="option3"><img src <="imageslink/avatar3.png rel" width="30">Option 3="icon<br><br>
+            <label for="" typedifficulty">Difficulty:</label>
+           =" <select id="difficulty">
+                <imageoption value="easy">Easy/png</option>
+                <option value="medium">Medium"</option sizes="32x32>
+                <option value="hard">Hard</option>
+            </select><br><br>
+           " <input type="submit href" value="Create Profile">
+="favicon        </form>
+    </-32div>
+</div>
+
+x<!-- Map -->
+<div id32="map.png">
+   " class="page">
+ <    <h2>Mapstyle of Bolivia</h2>
+   >
+        <div id="map-image body" style="background-image: url('images/bolivia {
+           -map.png');"></div>
+    <button class="region" font-family data-region="la-paz:"><img src=" Arial,images/la sans-serif-paz.svg" width="3;
+0">La Paz</button>
+    <button class="region" data-region="santa-cruz"><img src="images/santa-cruz.svg" width="30           ">Santa Cruz</button>
+    <!-- More regions... -->
+ background-color: #    <h2 idf0f="selected-0f0region-name"></h2>
+    <p id;
+       ="region-description"></p>
+    <ul id="ch }
+allenge-list"></ul>
+</div        
+        .>
+
+<!-- Challenge Pagepage -->
+<div id="challenge" class {
+="page">
+    <div class="center-content            display">
+       : none <h2>Challenge</h2>
+        <p id="question-text"></p>
+        <div id=";
+answer-options"></div>
+        <button id            padding="submit-answer-btn: ">Submit Answer</button20px>
+        <;
+       button id="next-question-btn" disabled>Next }
+ Question</button>
+    </div>
+</div>
+
+<!-- Add        
+        some interactive .active elements -->
+<div id="-pageconfetti" style="display: none;">
+ {
+    <img src="images/confetti            display.png" alt="Confetti">
+</div: block>
+
+<script>
+    // Show confetti when;
+        correct answer is submitted
+    document }
+.getElementById        
+       ('submit-answer-btn').addEvent navListener('click {
+', function() {
+        if (document.getElementById('confetti')) {
+                       document.getElementById('conf background-color:etti'). #333style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('confetti;
+').style.display = '            color:none';
+ #fff            }, 3000);
+        }
+    });
+</script>
+
+</body>
+</html>
